@@ -1,0 +1,59 @@
+.live{
+    width: 80%;
+    height: auto;
+    background-color: #ffff;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+.live a{
+    padding-left: 60px;
+    font-size: 18px
+}
+.live-title{
+    font-size: 48px;
+    font-weight: 600;
+    color: rgb(255, 88, 174);
+    text-align: center;
+}
+
+.live img{
+    padding: 30px;
+    width: 40%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+}
+
+.live h4{
+    font-size: 32px;
+    text-align: center;
+}
+
+.live p{
+    font-size: 22px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: start;
+    padding-top: 32px;
+    padding-bottom: 80px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+.live{
+    width: 100%;
+}
+.live img{
+    max-width: 260px;
+}
+.live-title{
+    font-size: 18px;
+}
+.live-title p{
+    font-size: 14px;
+}
+
+}
