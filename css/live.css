@@ -39,5 +39,19 @@
 }
 
 @media screen and (max-width: 600px) {
-    news-subtitle: 20px
+
+
+.live{
+    width: 100%;
+}
+.live img{
+    max-width: 260px;
+}
+.live-title{
+    font-size: 18px;
+}
+.live-title p{
+    font-size: 14px;
+}
+
 }
