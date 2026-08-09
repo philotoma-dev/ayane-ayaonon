@@ -28,8 +28,8 @@
 
 
 .discography p {
-    font-size: 22px;
-    width: 50%;
+    font-size: 18px;
+    width: 70%;
     margin: 0 auto;
     text-align: start;
     padding-top: 32px;
@@ -52,6 +52,85 @@
     color: #fff;
 }
 
-.discography a:last-child:hover{
+.discography a:last-child:hover {
     color: #000
+}
+
+.discography .lyric{
+    width: 72%;
+    margin: 80px auto;
+    background: rgb(255, 240, 240);
+    border-radius: 20px;
+}
+
+.discography .lyric h4{
+    padding: 60px 0 6px;
+    font-size: 20px;
+}
+
+
+.discography .lyric p{
+    font-size: 18px;
+    text-align: start;
+    padding-bottom: 32px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .discography {
+        width: 90%;
+    }
+    .discography .back-button {
+        font-size: 12px;
+    }
+
+    .discography h2 {
+        font-size: 18px;
+    }
+
+    .discography img{
+        width: 420px;
+        margin: 16px auto;
+        padding: 0;
+    }
+
+    .discography .news-subtitle{
+        font-size: 20px;
+    }
+
+    .discography p{
+        width: 100%;
+        font-size: 12px;
+        padding: 16px 0;
+    }
+
+ .discography a:last-child {
+    width: 120px;
+    font-size: 10px;
+ }
+
+.discography .lyric{
+    width: 100%;
+    padding: 6px 12px;
+    margin: 0 auto;
+}
+
+.discography .lyric h4{
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.discography .lyric p{
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 8px ;
+}
+
+
+ footer .footer-link{
+font-size: 16px;
+ }
+
+
 }
