@@ -1,0 +1,407 @@
+/* ================= Main Visual ================= */
+.mv {
+    position: relative;
+    width: 100%;
+    height: 82vh;
+    min-height: 540px;
+    max-height: 860px;
+    overflow: hidden;
+}
+
+.mv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 文字を読みやすくするためのふんわりとした光のグラデーション */
+.mv-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 248, 250, 0.72) 0%,
+        rgba(255, 248, 250, 0.35) 50%,
+        rgba(255, 248, 250, 0) 100%
+    );
+}
+
+.mv-text {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.mv-en {
+    font-family: var(--font-en-serif);
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 34px);
+    color: var(--primary-pink);
+    letter-spacing: 0.12em;
+    margin-bottom: 4px;
+}
+
+.mv h1 {
+    font-family: var(--font-ja-hand);
+    color: var(--primary-pink);
+    font-size: clamp(64px, 9vw, 128px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    text-shadow: 0 4px 20px rgba(255, 255, 255, 0.9);
+    margin-bottom: 24px;
+}
+
+.mv-catch {
+    font-family: var(--font-ja-hand);
+    color: var(--text-main);
+    font-size: clamp(18px, 2.2vw, 28px);
+    line-height: 1.7;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95);
+}
+
+/* ================= 共通カードセクション ================= */
+.card-section {
+    width: 90%;
+    max-width: 1040px;
+    margin: 72px auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+
+.section-inner {
+    padding: 56px 64px;
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid rgba(232, 90, 156, 0.18);
+    padding-bottom: 14px;
+}
+
+.section-title {
+    font-family: var(--font-en-serif);
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--primary-pink);
+    letter-spacing: 0.06em;
+    line-height: 1;
+}
+
+.section-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+}
+
+/* ================= News & Live ================= */
+.news-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-empty {
+    padding: 24px 0;
+    color: var(--text-muted);
+    font-size: 15px;
+    text-align: center;
+}
+
+.news-link {
+    display: flex;
+    align-items: center;
+    padding: 20px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.news-link:last-child {
+    border-bottom: none;
+}
+
+.news-link:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(6px);
+}
+
+.news-date {
+    font-family: var(--font-en-sans);
+    color: var(--primary-pink);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    min-width: 110px;
+}
+
+.news-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-main);
+    flex: 1;
+}
+
+.news-arrow {
+    font-family: var(--font-en-sans);
+    color: var(--primary-pink);
+    font-size: 18px;
+    opacity: 0.5;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.news-link:hover .news-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+/* ================= Profile ================= */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-imgbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 36px;
+}
+
+.profile-photo {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.profile-photo img {
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.profile-content {
+    text-align: center;
+    max-width: 640px;
+}
+
+.profile-content h3 {
+    font-family: var(--font-ja-hand);
+    font-size: 28px;
+    color: var(--primary-pink);
+    margin-bottom: 18px;
+    letter-spacing: 0.08em;
+}
+
+.profile-content h3 span {
+    font-family: var(--font-en-serif);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.profile-content p {
+    font-size: 16px;
+    line-height: 2.1;
+    color: var(--text-main);
+}
+
+/* ================= Discography ================= */
+.song-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.song-box {
+    display: block;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 16px 22px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.song-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(232, 90, 156, 0.16);
+}
+
+.song-img-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.song-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.song-box:hover .song-img-wrap img {
+    transform: scale(1.06);
+}
+
+.song-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-pink);
+    font-family: var(--font-en-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.song-box h3 {
+    margin-top: 16px;
+    text-align: center;
+    font-family: var(--font-ja-hand);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: color 0.3s;
+}
+
+.song-box:hover h3 {
+    color: var(--primary-pink);
+}
+
+/* ================= Goods ================= */
+.goods-img-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.goods-img-wrap img {
+    width: 100%;
+}
+
+/* ================= スマホ対応 ================= */
+@media screen and (max-width: 768px) {
+    .pc-only {
+        display: none;
+    }
+
+    .mv {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .mv-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 248, 250, 0.2) 0%,
+            rgba(255, 248, 250, 0.85) 100%
+        );
+    }
+
+    .mv-text {
+        top: auto;
+        bottom: 10%;
+        left: 6%;
+        transform: none;
+    }
+
+    .card-section {
+        width: 92%;
+        margin: 40px auto;
+        border-radius: 20px;
+    }
+
+    .section-inner {
+        padding: 32px 22px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 24px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .news-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 16px 8px;
+    }
+
+    .news-arrow {
+        display: none;
+    }
+
+    .news-title {
+        font-size: 15px;
+    }
+
+    .profile-imgbox {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .profile-photo.sub-photo {
+        display: none;
+    }
+
+    .profile-content h3 {
+        font-size: 24px;
+    }
+
+    .profile-content p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .song-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .song-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .song-img-wrap {
+        width: 88px;
+        height: 88px;
+        flex-shrink: 0;
+    }
+
+    .song-badge {
+        display: none;
+    }
+
+    .song-box h3 {
+        margin-top: 0;
+        text-align: left;
+        font-size: 18px;
+    }
+}
